@@ -50,9 +50,9 @@
             <!-- Кнопки -->
             <StackPanel Grid.Row="4" Orientation="Horizontal" 
                     HorizontalAlignment="Center" Margin="0,20">
-                <Button x:Name="btnLogin" Content="Вход" Width="100" 
-                    Click="BtnLogin_Click" IsDefault="True"/>
-                <Button x:Name="btnExit" Content="Выход" Width="100" 
+                <Button x:Name="btnLogin" Content="Вход" Width="106" FontSize="14" 
+                    Click="BtnLogin_Click" IsDefault="True" Height="36"/>
+                <Button x:Name="btnExit" Content="Выход" Width="106" FontSize="14"
                     Click="BtnExit_Click"/>
             </StackPanel>
 
