@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:Kino.Views"
         mc:Ignorable="d"
         Title="Фильм" 
-Height="400" Width="350" 
-WindowStartupLocation="CenterOwner"
-MinHeight="400" MinWidth="350"
-ResizeMode="NoResize">
+        Height="400" Width="350" 
+        WindowStartupLocation="CenterOwner"
+        MinHeight="400" MinWidth="350"
+        ResizeMode="NoResize">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
