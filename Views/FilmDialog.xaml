@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kino.Views"
         mc:Ignorable="d"
-        Title="Фильм" 
+        Title=" Создание (редактирование) фильма"  
         Height="400" Width="350" 
         WindowStartupLocation="CenterOwner"
         MinHeight="400" MinWidth="350"
         ResizeMode="NoResize">
-    <Grid Margin="10">
+
+    <Grid Margin="5" Background="#FFDBDA">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -29,23 +30,23 @@
         </Grid.ColumnDefinitions>
 
         <!-- Название фильма -->
-        <TextBlock Grid.Column="0" Text="Название фильма:" VerticalAlignment="Center" Height="16"/>
+        <TextBlock Grid.Column="0" Text="Название фильма:" VerticalAlignment="Center" Height="16" Margin="5"/>
         <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Жанр -->
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Жанр:" VerticalAlignment="Center" Height="16"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Жанр:" VerticalAlignment="Center" Height="16" Margin="5"/>
         <TextBox x:Name="txtGenre" Grid.Row="1" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Режиссёр -->
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Режиссёр:" VerticalAlignment="Center" Height="16"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Режиссёр:" VerticalAlignment="Center" Height="16" Margin="5"/>
         <TextBox x:Name="txtDirector" Grid.Row="2" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Продолжительность -->
-        <TextBlock Grid.Row="3" Grid.Column="0" Text="Продолжительность:" VerticalAlignment="Center" Height="16"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Продолжительность:" VerticalAlignment="Center" Height="16" Margin="5"/>
         <TextBox x:Name="txtDuration" Grid.Row="3" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Возрастное ограничение -->
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Возр. ограничение:" VerticalAlignment="Center" Height="16" Grid.RowSpan="2"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Возр. ограничение:" VerticalAlignment="Center" Height="16" Margin="5" Grid.RowSpan="2"/>
         <ComboBox x:Name="cboAgeRating" Grid.Row="4" Grid.Column="1" Margin="9,5,9,5" Grid.RowSpan="2">
             <ComboBoxItem Content="0+"/>
             <ComboBoxItem Content="6+"/>
@@ -55,7 +56,7 @@
         </ComboBox>
 
         <!-- Цена билета -->
-        <TextBlock Grid.Row="6" Grid.Column="0" Text="Цена билета:" VerticalAlignment="Center" Height="16"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Цена билета:" VerticalAlignment="Center" Height="16" Margin="5"/>
         <TextBox x:Name="txtPrice" Grid.Row="6" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Сообщение об ошибке -->
