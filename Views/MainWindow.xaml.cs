@@ -120,6 +120,9 @@ namespace Kino
                     _sessions.Remove(session);
                 }
 
+
+
+
                 _films.Remove(selectedFilm);
                 RefreshFilms();
                 RefreshSessions();
