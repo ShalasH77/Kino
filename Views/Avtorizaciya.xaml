@@ -9,57 +9,137 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
 
+
+    <!-- Основной контейнер (Grid) -->
+    <!--  Grid - сетка, в которой располагаются элементы -->
     <Grid Margin="8">
+        
+        <!-- Фоновый слой -->
+        <!-- Первый Grid - создаёт фоновую подложку -->
         <Grid Background="#FFDBDA">
+            <!-- Верхняя декоративная полоса    VerticalAlignment="Top" - прижимаем к верху
+                Height="80" - высота 80 пикселей    Background="#DB7F8E" - цвет -->
             <Grid VerticalAlignment="Top"
                   Height="80"
                   Background="#DB7F8E">
             </Grid>
         </Grid>
+
+
+        <!-- Основной слой (содержимое окна)  -->
+        <!-- Второй Grid - содержит все элементы управления -->
         <Grid Margin="10">
+            
+            <!-- Строки сетки (7 строк)-->
             <Grid.RowDefinitions>
+                <!-- Строка 0: название "Кинотеатр" и "SHALASH" -->
                 <RowDefinition Height="Auto"/>
+                <!-- Строка 1: пустая (для разделения) -->
                 <RowDefinition Height="Auto"/>
+                <!-- Строка 2: заголовок + поле Логин -->
                 <RowDefinition Height="Auto"/>
+                <!-- Строка 3: поле Пароль -->
                 <RowDefinition Height="Auto"/>
+                <!-- Строка 4: кнопки и статус -->
                 <RowDefinition Height="Auto"/>
+                <!-- Строка 5: пустая -->
                 <RowDefinition Height="Auto"/>
+                <!-- Строка 6: заполнитель (занимает остаток места) -->
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Text="Кинотеатр" 
-       FontSize="20" FontWeight="Bold" 
-       HorizontalAlignment="Center" Margin="0,0,0,74"/>
+            <!-- строка 0: "Кинотеатр" -->
+            <TextBlock Grid.Row="0" 
+                       Text="Кинотеатр"                       
+                       FontSize="20"                          
+                       FontWeight="Bold"                      
+                       HorizontalAlignment="Center"           
+                       Margin="0,0,0,74"/>                    
 
-            <TextBlock Grid.Row="0" Text="SHALASH" 
-       FontSize="30" FontWeight="Bold" 
-       HorizontalAlignment="Center" Margin="0,20,0,32"/>
+            <!-- строка 0 (наложение): "SHALASH"  -->
+            <TextBlock Grid.Row="0" 
+                       Text="SHALASH" 
+                       FontSize="30"                          
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,20,0,32"/>                   
 
-            <!-- Заголовок -->
+            <!-- Заголовок "Вход в систему" -->
+
+            <!-- Grid.RowSpan="3" - занимает 3 строки (0, 1, 2) -->
             <TextBlock Text="Вход в систему" 
-       FontSize="21" FontWeight="Bold" 
-       HorizontalAlignment="Center" Margin="0,75,0,65" Grid.RowSpan="3"/>
-            <!-- Логин -->
-            <TextBlock Grid.Row="2" Text="Логин:" Margin="5,15,5,55" Grid.RowSpan="2"/>
-            <TextBox x:Name="txtLogin" Grid.Row="2" Margin="5,35,5,5" Height="30"/>
+                       FontSize="21" 
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,75,0,65" 
+                       Grid.RowSpan="3"/>
+            
+            <!-- Метка "Логин" -->
+            <!-- Grid.Row="2" - третья строка    Grid.RowSpan="2" - занимает 2 строки (2 и 3) -->
+            <TextBlock Grid.Row="2" 
+                       Text="Логин:" 
+                       Margin="5,15,5,55" 
+                       Grid.RowSpan="2"/>
+            
+            <!-- поле ввода логина -->
+            <!-- Имя для доступа из C# -->
+            <TextBox x:Name="txtLogin"                       
+                     Grid.Row="2" 
+                     Margin="5,35,5,5"                       
+                     Height="30"/>                           
 
-            <!-- Пароль -->
-            <TextBlock Grid.Row="3" Text="Пароль:" Margin="5"/>
-            <PasswordBox x:Name="txtPassword" Grid.Row="3" Margin="5,25,5,5" Height="30"/>
+            <!-- Метка "Пароль:" -->
+            <TextBlock Grid.Row="3" 
+                       Text="Пароль:" 
+                       Margin="5"/>
 
-            <!-- Кнопки -->
-            <StackPanel Grid.Row="4" Orientation="Horizontal" 
-                    HorizontalAlignment="Center" Margin="0,20">
-                <Button x:Name="btnLogin" Content="Вход" Width="106" FontSize="14" 
-                    Click="BtnLogin_Click" IsDefault="True" Height="36"/>
-                <Button x:Name="btnExit" Content="Выход" Width="106" FontSize="14"
-                    Click="BtnExit_Click"/>
+            <!-- поле ввода пароля -->
+            <!-- PasswordBox - специальное поле, символы скрыты (показываются точками) -->
+            <PasswordBox x:Name="txtPassword" 
+                         Grid.Row="3" 
+                         Margin="5,25,5,5"                   
+                         Height="30"/>
+
+            <!-- кнопки (Вход и Выход) -->
+            <!-- StackPanel - контейнер с горизонтальным расположением
+                Orientation="Horizontal" - элементы в ряд
+                HorizontalAlignment="Center" - по центру
+            -->
+            <StackPanel Grid.Row="4" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Center" 
+                        Margin="0,20">                       
+                
+                <!-- кнопка "Вход" -->
+                <Button x:Name="btnLogin" 
+                        Content="Вход"                       
+                        Width="106"                          
+                        FontSize="14"                        
+                        Click="BtnLogin_Click"              
+                        IsDefault="True"                     
+                        Height="36"/>                        
+                
+                <!-- кнопка "Выход" -->
+                <Button x:Name="btnExit" 
+                        Content="Выход" 
+                        Width="106" 
+                        FontSize="14"
+                        Click="BtnExit_Click"/>
             </StackPanel>
 
-            <!-- Статус -->
-            <TextBlock x:Name="txtStatus" Grid.Row="4" 
-       Text="" Foreground="#FF5F50" TextAlignment="Center"
-       Margin="0" VerticalAlignment="Bottom"/>
+            <!-- статус (сообщение об ошибке) -->
+
+            <!-- 
+                Здесь отображаются ошибки при неверном логине/пароле
+                VerticalAlignment="Bottom" - прижат к низу ячейки
+            -->
+            <TextBlock x:Name="txtStatus" 
+                       Grid.Row="4" 
+                       Text=""                              
+                       Foreground="#FF5F50"               
+                       TextAlignment="Center"                
+                       Margin="0" 
+                       VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </Window>
