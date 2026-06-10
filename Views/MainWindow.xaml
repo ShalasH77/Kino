@@ -53,7 +53,7 @@
                             <DataGridTextColumn Header="Режиссёр" Binding="{Binding Director}" Width="150"/>
                             <DataGridTextColumn Header="Продолжительность (мин)" Binding="{Binding Duration}" Width="210"/>
                             <DataGridTextColumn Header="Возр. ограничение" Binding="{Binding AgeRating}" Width="150"/>
-                            <DataGridTextColumn Header="Цена билета" Binding="{Binding Price, StringFormat={}{0:F0} ₽}" Width="104"/>
+                            <DataGridTextColumn Header="Цена билета" Binding="{Binding Price, StringFormat={}{0:F2} ₽}" Width="104"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
