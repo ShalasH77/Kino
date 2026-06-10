@@ -1,0 +1,69 @@
+﻿<Window x:Class="Kino.Views.SessionDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kino.Views"
+        mc:Ignorable="d"
+        Title="Сеанс" 
+Height="400" Width="350" 
+WindowStartupLocation="CenterOwner"
+MinHeight="400" MinWidth="350"
+ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="122"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Фильм -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Название фильма:" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cboFilm" Grid.Row="0" Grid.Column="1" Margin="9,5,9,5"
+          DisplayMemberPath="Name" SelectedValuePath="Id"/>
+
+        <!-- Дата сеанса -->
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Дата сеанса:" VerticalAlignment="Center"/>
+        <DatePicker x:Name="dpDate" Grid.Row="1" Grid.Column="1" Margin="9,5,9,5"/>
+
+        <!-- Время начала -->
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Время начала:" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtStartTime" Grid.Row="2" Grid.Column="1" Margin="9,5,9,5" 
+         ToolTip="Формат: ЧЧ:ММ (например, 19:30)"/>
+
+        <!-- Зал -->
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Зал:" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cboHall" Grid.Row="3" Grid.Column="1" Margin="9,5,9,5" IsEditable="True">
+            <ComboBoxItem Content="Зал 1"/>
+            <ComboBoxItem Content="Зал 2"/>
+            <ComboBoxItem Content="Зал 3"/>
+            <ComboBoxItem Content="VIP зал"/>
+        </ComboBox>
+
+        <!-- Свободных мест -->
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Свободных мест:" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtFreeSeats" Grid.Row="4" Grid.Column="1" Margin="9,5,9,5"/>
+
+        <!-- Сообщение об ошибке -->
+        <TextBlock x:Name="txtError" Grid.Row="5" Grid.ColumnSpan="2" 
+           Foreground="Red" TextWrapping="Wrap" Margin="0,10"/>
+
+        <!-- Кнопки -->
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" 
+            Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15">
+            <Button x:Name="btnSave" Content="Сохранить" Width="92" 
+            IsDefault="True" Click="BtnSave_Click" Height="36"/>
+            <Button x:Name="btnCancel" Content="Отмена" Width="92" 
+            IsCancel="True" Click="BtnCancel_Click" Height="36"/>
+        </StackPanel>
+    </Grid>
+</Window>
