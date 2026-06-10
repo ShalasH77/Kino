@@ -3,68 +3,103 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Kino"
              StartupUri="Views/Avtorizaciya.xaml">
+    <!-- Цвета для всего приложения -->
     <Application.Resources>
-        <!-- Тема -->
+        <!-- Тема - основной цвет приложения -->
         <SolidColorBrush x:Key="PrimaryColor" Color="LightPink"/>
-        <SolidColorBrush x:Key="SecondaryColor" Color="#DB7F8E"/>
-        <SolidColorBrush x:Key="ErrorColor" Color="#E74C3C"/>
-        <SolidColorBrush x:Key="SuccessColor" Color="LightSteelBlue"/>
 
-        <!-- Общий цвет текста -->
+        <!-- Вторичный цвет -->
+        <SolidColorBrush x:Key="SecondaryColor" Color="#DB7F8E"/>
+
+        <!-- Цвет ошибки (для валидации полей) -->
+        <SolidColorBrush x:Key="ErrorColor" Color="#E74C3C"/>
+
+        <!-- Общий цвет текста во всём приложении -->
         <SolidColorBrush x:Key="GlobalTextColor" Color="#604D53"/>
 
-        <!-- Цвета для вкладок -->
+        <!-- Цвета для вкладок TabControl -->
         <SolidColorBrush x:Key="TabBackground" Color="#FFDBDA"/>
-        <SolidColorBrush x:Key="TabSelectedBackground" Color="#DB7F8E"/>
-        <SolidColorBrush x:Key="TabTextColor" Color="#604D53"/>
-        <SolidColorBrush x:Key="TabSelectedTextColor" Color="White"/>
         
-        <!-- Стиль для текстовых полей с валидацией -->
+        <!-- Фон неактивной вкладки -->
+        <SolidColorBrush x:Key="TabSelectedBackground" Color="#DB7F8E"/>
+        
+        <!-- Фон активной вкладки -->
+        <SolidColorBrush x:Key="TabTextColor" Color="#604D53"/>
+        
+        <!-- Цвет текста неактивной вкладки -->
+        <SolidColorBrush x:Key="TabSelectedTextColor" Color="White"/>
+
+        <!-- Стиль для тектовых полей (TextBox) -->
+
         <Style TargetType="TextBox">
+            <!-- Отступы и выравнивание -->
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Padding" Value="5"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+            <!-- Триггеры - срабатывают при определённых условиях -->
             <Style.Triggers>
+                <!-- Если в поле ошибка валидации -->
                 <Trigger Property="Validation.HasError" Value="True">
                     <Setter Property="BorderBrush" Value="{StaticResource ErrorColor}"/>
+                    <!-- Красная рамка -->
                     <Setter Property="BorderThickness" Value="2"/>
+                    <!-- Толщина рамки -->
                     <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}"/>
+                    <!-- Подсказка с ошибкой -->
                 </Trigger>
             </Style.Triggers>
         </Style>
 
-        <!-- Стиль для кнопок -->
+        
+        <!-- Стиль всех кнопок -->
         <Style TargetType="Button">
+            <!-- Внешний вид кнопки -->
             <Setter Property="Margin" Value="7"/>
+            <!-- Отступы вокруг кнопки -->
             <Setter Property="Padding" Value="10,5"/>
+            <!-- Внутренние отступы (лево/право = 10, верх/низ = 5) -->
             <Setter Property="Background" Value="{StaticResource SecondaryColor}"/>
+            <!-- Фон -->
             <Setter Property="Foreground" Value="White"/>
+            <!-- Цвет текста: белый -->
             <Setter Property="Cursor" Value="Hand"/>
+            <!-- Курсор: рука (как ссылка) -->
             <Setter Property="BorderThickness" Value="0"/>
+            <!-- Без границы -->
 
-            <!-- кнопки с закруглёнными углами -->
+            <!-- Шаблон кнопки (определяет её внутреннюю структуру) -->
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
+                        <!-- Border - рамка, которая создаёт закругление -->
                         <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="8"
-                                Padding="{TemplateBinding Padding}">
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="8"  
+                            Padding="{TemplateBinding Padding}">
+                            <!-- ContentPresenter - отображает содержимое кнопки (текст) -->
                             <ContentPresenter HorizontalAlignment="Center"
-                              VerticalAlignment="Center"/>
+                                          VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
 
+            <!-- Триггеры - меняют вид кнопки в разных состояниях -->
             <Style.Triggers>
+                <!-- Состояние: курсор мыши на кнопке -->
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Opacity" Value="0.8"/>
+                    <!-- Становится на 20% прозрачнее -->
                 </Trigger>
+
+                <!-- Состояние: кнопка отключена (IsEnabled = False) -->
                 <Trigger Property="IsEnabled" Value="False">
                     <Setter Property="Opacity" Value="0.5"/>
+                    <!-- Становится полупрозрачной -->
                     <Setter Property="Cursor" Value="Arrow"/>
+                    <!-- Курсор - обычная стрелка -->
                 </Trigger>
             </Style.Triggers>
         </Style>
