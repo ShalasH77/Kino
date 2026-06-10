@@ -10,6 +10,12 @@
         <SolidColorBrush x:Key="ErrorColor" Color="#E74C3C"/>
         <SolidColorBrush x:Key="SuccessColor" Color="LightSteelBlue"/>
 
+        <!-- Цвета для вкладок -->
+        <SolidColorBrush x:Key="TabBackground" Color="#FFDBDA"/>
+        <SolidColorBrush x:Key="TabSelectedBackground" Color="#DB7F8E"/>
+        <SolidColorBrush x:Key="TabTextColor" Color="#604D53"/>
+        <SolidColorBrush x:Key="TabSelectedTextColor" Color="White"/>
+
         <!-- Стиль для текстовых полей с валидацией -->
         <Style TargetType="TextBox">
             <Setter Property="Margin" Value="5"/>
