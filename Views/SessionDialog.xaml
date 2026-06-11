@@ -32,70 +32,66 @@
         </Grid.RowDefinitions>
 
         <!-- 2 колонки сетки -->
-    <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="122"/>
-        <ColumnDefinition Width="*"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="122"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-    
+
         <!-- Строка 0: выбор фильма -->
         <TextBlock Grid.Row="0" 
-                   Grid.Column="0" 
-                   Text="1. Название фильма:" 
-                   VerticalAlignment="Center"
-                   Margin="5,0,5,0"/>
+               Grid.Column="0" 
+               Text="1. Название фильма:" 
+               VerticalAlignment="Center"
+               Margin="5,0,5,0"/>
+
         <!-- ComboBox - выпадающий список для выбора фильма -->
         <ComboBox x:Name="cboFilm" 
-                  Grid.Row="0" 
-                  Grid.Column="1" 
-                  Margin="9,5,9,5"
-                  DisplayMemberPath="Name" 
-                  SelectedValuePath="Id"/>
+              Grid.Row="0" 
+              Grid.Column="1" 
+              Margin="9,5,9,5"
+              DisplayMemberPath="Name" 
+              SelectedValuePath="Id"/>
 
         <!-- Строка 1: дата сеанса -->
         <TextBlock Grid.Row="1" 
-                   Grid.Column="0" 
-                   Text="2. Дата сеанса:" 
-                   VerticalAlignment="Center"
-                   Margin="5,0,5,0"/>
+               Grid.Column="0" 
+               Text="2. Дата сеанса:" 
+               VerticalAlignment="Center"
+               Margin="5,0,5,0"/>
 
         <!-- DatePicker - элемент для выбора даты с календарём -->
         <DatePicker x:Name="dpDate" 
-                    Grid.Row="1" 
-                    Grid.Column="1" 
-                    Margin="9,5,9,5"/>
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Margin="9,5,9,5"/>
 
         <!-- Строка 2: Время начала -->
         <TextBlock Grid.Row="2" 
-                   Grid.Column="0" 
-                   Text="3. Время начала:" 
-                   VerticalAlignment="Center"
-                   Margin="5,0,5,0"/>
+               Grid.Column="0" 
+               Text="3. Время начала:" 
+               VerticalAlignment="Center"
+               Margin="5,0,5,0"/>
 
         <!-- TextBox для ввода времени -->
         <TextBox x:Name="txtStartTime" 
-                 Grid.Row="2" 
-                 Grid.Column="1" 
-                 Margin="9,5,9,5" 
-                 ToolTip="Формат: ЧЧ:ММ (например, 19:30)"/>
+             Grid.Row="2" 
+             Grid.Column="1" 
+             Margin="9,5,9,5" 
+             ToolTip="Формат: ЧЧ:ММ (например, 19:30)"/>
 
         <!-- Строка 3: зал -->
         <TextBlock Grid.Row="3" 
-                   Grid.Column="0" 
-                   Text="4. Зал:" 
-                   VerticalAlignment="Center"
-                   Margin="5,0,5,0"/>
+               Grid.Column="0" 
+               Text="4. Зал:" 
+               VerticalAlignment="Center"
+               Margin="5,0,5,0"/>
 
-        <!-- 
-            ComboBox - выпадающий список с предустановленными залами
-            IsEditable="True" - можно ввести название зала вручную
-        -->
+        <!-- ComboBox - выпадающий список с предустановленными залами -->
         <ComboBox x:Name="cboHall" 
-                  Grid.Row="3" 
-                  Grid.Column="1" 
-                  Margin="9,5,9,5" 
-                  IsEditable="True">
-            <!-- Разрешает ручной ввод -->
-
+              Grid.Row="3" 
+              Grid.Column="1" 
+              Margin="9,5,9,5" 
+              IsEditable="True">
             <!-- Предустановленные варианты залов -->
             <ComboBoxItem Content="Зал 1"/>
             <ComboBoxItem Content="Зал 2"/>
@@ -105,53 +101,47 @@
 
         <!-- Строка 4: Свободные места -->
         <TextBlock Grid.Row="4" 
-                   Grid.Column="0" 
-                   Text="5. Свободных мест:" 
-                   VerticalAlignment="Center"
-                   Margin="5,0,5,0"/>
+               Grid.Column="0" 
+               Text="5. Свободных мест:" 
+               VerticalAlignment="Center"
+               Margin="5,0,5,0"/>
 
-        <!-- 
-            TextBox для ввода количества свободных мест
-            Должно быть целое число от 0 до 200
-        -->
+        <!-- TextBox для ввода количества свободных мест -->
         <TextBox x:Name="txtFreeSeats" 
-                 Grid.Row="4" 
-                 Grid.Column="1" 
-                 Margin="9,5,9,5"/>
+             Grid.Row="4" 
+             Grid.Column="1" 
+             Margin="9,5,9,5"/>
 
         <!-- Строка 5: сообщение об ошибке -->
-
-        <!-- TextBlock для отображения ошибок валидации -->
         <TextBlock x:Name="txtError" 
-                   Grid.Row="5" 
-                   Grid.ColumnSpan="2" 
-                   Foreground="Red" 
-                   TextWrapping="Wrap" 
-                   Margin="0,10"/>
+               Grid.Row="5" 
+               Grid.ColumnSpan="2" 
+               Foreground="Red" 
+               TextWrapping="Wrap" 
+               Margin="0,10"/>
 
         <!-- Строка 6: кнопки -->
-        <!-- StackPanel - контейнер для горизонтального расположения кнопок -->
         <StackPanel Grid.Row="6" 
-                    Grid.ColumnSpan="2" 
-                    Orientation="Horizontal" 
-                    HorizontalAlignment="Right" 
-                    Margin="0,15">
+                Grid.ColumnSpan="2" 
+                Orientation="Horizontal" 
+                HorizontalAlignment="Right" 
+                Margin="0,15">
 
             <!-- кнопка "сохранить" -->
             <Button x:Name="btnSave" 
-                    Content="Сохранить" 
-                    Width="92"                    
+                Content="Сохранить" 
+                Width="92"                    
                 IsDefault="True"
                 Click="BtnSave_Click"
                 Height="36"/>
 
             <!-- кнопка "отмена" -->
-                <Button x:Name="btnCancel" 
-                    Content="Отмена" 
-                    Width="92" 
-                    IsCancel="True"                
-                    Click="BtnCancel_Click" 
-                    Height="36"/>
+            <Button x:Name="btnCancel" 
+                Content="Отмена" 
+                Width="92" 
+                IsCancel="True"                
+                Click="BtnCancel_Click" 
+                Height="36"/>
         </StackPanel>
 
     </Grid>
