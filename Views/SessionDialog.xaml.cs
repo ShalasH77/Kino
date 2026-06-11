@@ -147,7 +147,7 @@ namespace Kino.Views
             // Дата не может быть в прошлом (только сегодня или позже)
             if (dpDate.SelectedDate == null || dpDate.SelectedDate < DateTime.Today)
             {
-                errorMessage += "!Выберите корректную дату (сегодня или позже)\n";
+                errorMessage += " !Выберите корректную дату (сегодня или позже)\n";
                 isValid = false;
                 SetValidationStyle(dpDate, true);
             }
@@ -161,7 +161,7 @@ namespace Kino.Views
 
             if (!Regex.IsMatch(txtStartTime.Text, @"^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"))
             {
-                errorMessage += "!Введите корректное время в формате ЧЧ:ММ (19:30)\n";
+                errorMessage += " !Введите корректное время в формате ЧЧ:ММ (19:30)\n";
                 isValid = false;
                 SetValidationStyle(txtStartTime, true);
             }
@@ -174,7 +174,7 @@ namespace Kino.Views
             // Зал не может быть пустым
             if (cboHall.SelectedItem == null || string.IsNullOrWhiteSpace(cboHall.Text))
             {
-                errorMessage += "!Выберите или введите название зала\n";
+                errorMessage += " !Выберите или введите название зала\n";
                 isValid = false;
                 SetValidationStyle(cboHall, true);
             }
@@ -188,7 +188,7 @@ namespace Kino.Views
             // freeSeats - выходной параметр с результатом
             if (!int.TryParse(txtFreeSeats.Text, out int freeSeats) || freeSeats < 0 || freeSeats > 200)
             {
-                errorMessage += "!Количество свободных мест должно быть целым числом от 0 до 200\n";
+                errorMessage += " !Количество свободных мест должно быть целым числом от 0 до 200\n";
                 isValid = false;
                 SetValidationStyle(txtFreeSeats, true);
             }
