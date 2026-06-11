@@ -13,7 +13,7 @@
 
 
     <Grid Margin="5" Background="#FFDBDA">
-        <!-- 7 СТРОК СЕТКИ -->
+        <!-- 7 строк сетки -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <!-- Строка 0: Выбор фильма -->
@@ -40,8 +40,9 @@
         <!-- Строка 0: выбор фильма -->
         <TextBlock Grid.Row="0" 
                    Grid.Column="0" 
-                   Text="Название фильма:" 
-                   VerticalAlignment="Center"/>
+                   Text="1. Название фильма:" 
+                   VerticalAlignment="Center"
+                   Margin="5,0,5,0"/>
         <!-- ComboBox - выпадающий список для выбора фильма -->
         <ComboBox x:Name="cboFilm" 
                   Grid.Row="0" 
@@ -53,8 +54,9 @@
         <!-- Строка 1: дата сеанса -->
         <TextBlock Grid.Row="1" 
                    Grid.Column="0" 
-                   Text="Дата сеанса:" 
-                   VerticalAlignment="Center"/>
+                   Text="2. Дата сеанса:" 
+                   VerticalAlignment="Center"
+                   Margin="5,0,5,0"/>
 
         <!-- DatePicker - элемент для выбора даты с календарём -->
         <DatePicker x:Name="dpDate" 
@@ -65,8 +67,9 @@
         <!-- Строка 2: Время начала -->
         <TextBlock Grid.Row="2" 
                    Grid.Column="0" 
-                   Text="Время начала:" 
-                   VerticalAlignment="Center"/>
+                   Text="3. Время начала:" 
+                   VerticalAlignment="Center"
+                   Margin="5,0,5,0"/>
 
         <!-- TextBox для ввода времени -->
         <TextBox x:Name="txtStartTime" 
@@ -78,8 +81,9 @@
         <!-- Строка 3: зал -->
         <TextBlock Grid.Row="3" 
                    Grid.Column="0" 
-                   Text="Зал:" 
-                   VerticalAlignment="Center"/>
+                   Text="4. Зал:" 
+                   VerticalAlignment="Center"
+                   Margin="5,0,5,0"/>
 
         <!-- 
             ComboBox - выпадающий список с предустановленными залами
@@ -102,8 +106,9 @@
         <!-- Строка 4: Свободные места -->
         <TextBlock Grid.Row="4" 
                    Grid.Column="0" 
-                   Text="Свободных мест:" 
-                   VerticalAlignment="Center"/>
+                   Text="5. Свободных мест:" 
+                   VerticalAlignment="Center"
+                   Margin="5,0,5,0"/>
 
         <!-- 
             TextBox для ввода количества свободных мест
@@ -132,7 +137,7 @@
                     HorizontalAlignment="Right" 
                     Margin="0,15">
 
-            <!-- кнопка "сохраниеть" -->
+            <!-- кнопка "сохранить" -->
             <Button x:Name="btnSave" 
                     Content="Сохранить" 
                     Width="92"                    
