@@ -45,9 +45,9 @@
                           CanUserAddRows="False"
                           CanUserDeleteRows="False"
                           MouseDoubleClick="DgFilms_MouseDoubleClick" RenderTransformOrigin="0.475,0.497">
-                        <!-- Колонки таблицы фильмов -->
+                        <!-- Колонки таблицы фильмов (привязка) -->
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="27"/>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="27"/> 
                             <DataGridTextColumn Header="Название фильма" Binding="{Binding Name}" Width="200"/>
                             <DataGridTextColumn Header="Жанр" Binding="{Binding Genre}" Width="115"/>
                             <DataGridTextColumn Header="Режиссёр" Binding="{Binding Director}" Width="150"/>
