@@ -11,21 +11,35 @@
         MinHeight="400" MinWidth="350"
         ResizeMode="NoResize">
 
+    <!-- Основной контейнер (Grid) -->
     <Grid Margin="5" Background="#FFDBDA">
+        <!-- 9 строк сетки -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <!-- Строка 0: Название фильма -->
             <RowDefinition Height="Auto"/>
+            <!-- Строка 1: Жанр -->
             <RowDefinition Height="Auto"/>
+            <!-- Строка 2: Режиссёр -->
             <RowDefinition Height="Auto"/>
+            <!-- Строка 3: Продолжительность -->
             <RowDefinition Height="Auto"/>
+            <!-- Строка 4: Возрастное ограничение -->
             <RowDefinition Height="Auto"/>
+            <!-- Строка 5: (заполнитель для ComboBox) -->
             <RowDefinition Height="Auto"/>
+            <!-- Строка 6: Цена билета -->
             <RowDefinition Height="Auto"/>
+            <!-- Строка 7: Сообщение об ошибке -->
             <RowDefinition Height="*"/>
+            <!-- Строка 8: Кнопки (занимает остаток места) -->
         </Grid.RowDefinitions>
 
+        <!-- 2 колонки сетки -->
         <Grid.ColumnDefinitions>
+            <!-- Левая колонка: ширина 122px (для меток: "Название:", "Жанр:" и т.д.) -->
             <ColumnDefinition Width="122"/>
+            <!-- Правая колонка: занимает всё оставшееся место (для полей ввода) -->
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
