@@ -79,11 +79,11 @@
 
         <!-- Кнопки -->
         <StackPanel Grid.Row="7" 
-            Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,26,0,65" Width="216" Grid.RowSpan="1" Grid.Column="1">
-            <Button x:Name="btnSave" Content="Сохранить" Width="92" 
-            IsDefault="True" Click="BtnSave_Click" Height="36"/>
-            <Button x:Name="btnCancel" Content="Отмена" Width="92" 
-            IsCancel="True" Click="BtnCancel_Click" Height="36"/>
+            Orientation="Horizontal" HorizontalAlignment="Left" Margin="10,10,0,81" Width="188" Grid.RowSpan="1" Grid.Column="1">
+            <Button x:Name="btnSave" Content="Сохранить" Width="81" 
+            IsDefault="True" Click="BtnSave_Click" Height="29"/>
+            <Button x:Name="btnCancel" Content="Отмена" Width="81" 
+            IsCancel="True" Click="BtnCancel_Click" Height="29"/>
         </StackPanel>
     </Grid>
 </Window>

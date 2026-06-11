@@ -101,7 +101,7 @@ namespace Kino.Views
             // Валидация названия
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                errorMessage += "!Введите название фильма\n";
+                errorMessage += "!Введите название\n";
                 isValid = false;
             }
 
@@ -122,14 +122,14 @@ namespace Kino.Views
             // Валидация продолжительности
             if (!int.TryParse(txtDuration.Text, out int duration) || duration < 30 || duration > 300)
             {
-                errorMessage += "!Продолжительность должна быть целым числом от 30 до 300 минут\n";
+                errorMessage += "!Продолжительность от 30 до 300 минут\n";
                 isValid = false;
             }
 
             // Валидация цены
             if (!decimal.TryParse(txtPrice.Text, out decimal price) || price < 100 || price > 2000)
             {
-                errorMessage += "!Цена билета должна быть числом от 100 до 2000 рублей\n";
+                errorMessage += "!Цена билета от 100 до 2000 рублей\n";
                 isValid = false;
             }
 
@@ -152,7 +152,7 @@ namespace Kino.Views
                 // Есть ошибка - красная рамка и подсказка
                 textBox.BorderBrush = System.Windows.Media.Brushes.Red;
                 textBox.BorderThickness = new Thickness(2);
-                textBox.ToolTip = "!Поле заполнено неверно";
+                textBox.ToolTip = "!неверно";
             }
             else
             {
