@@ -75,11 +75,11 @@
 
         <!-- Сообщение об ошибке -->
         <TextBlock x:Name="txtError" Grid.Row="7" Grid.ColumnSpan="2" 
-           Foreground="Red" TextWrapping="Wrap" Margin="0,10,0,10"/>
+           Foreground="Red" TextWrapping="Wrap" Margin="5,5,5,15"/>
 
         <!-- Кнопки -->
-        <StackPanel Grid.Row="8" 
-            Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,14,0,24" Grid.Column="1" Width="219">
+        <StackPanel Grid.Row="7" 
+            Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,26,0,65" Width="216" Grid.RowSpan="1" Grid.Column="1">
             <Button x:Name="btnSave" Content="Сохранить" Width="92" 
             IsDefault="True" Click="BtnSave_Click" Height="36"/>
             <Button x:Name="btnCancel" Content="Отмена" Width="92" 
