@@ -5,8 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kino.Models
-{
     // Модель фильма
     namespace Kino.Models  // Пространство имён для моделей данных
     {
@@ -37,7 +35,7 @@ namespace Kino.Models
 
             // Уникальный идентификатор фильма
             // Используется для поиска и связывания с сеансами
-
+  
             public int Id
             {
                 get => _id;  // get - возвращает значение поля _id
@@ -135,4 +133,3 @@ namespace Kino.Models
             }
         }
     }
-}
