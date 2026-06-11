@@ -129,7 +129,7 @@ namespace Kino.Views
             // Валидация цены
             if (!decimal.TryParse(txtPrice.Text, out decimal price) || price < 100 || price > 2000)
             {
-                errorMessage += "! Цена билета должна быть числом от 100 до 2000 рублей\n";
+                errorMessage += "!Цена билета должна быть числом от 100 до 2000 рублей\n";
                 isValid = false;
             }
 
