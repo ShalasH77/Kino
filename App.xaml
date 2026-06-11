@@ -61,7 +61,7 @@
             <!-- Внутренние отступы (лево/право = 10, верх/низ = 5) -->
             <Setter Property="Background" Value="{StaticResource SecondaryColor}"/>
             <!-- Фон -->
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="#604D53"/>
             <!-- Цвет текста: белый -->
             <Setter Property="Cursor" Value="Hand"/>
             <!-- Курсор: рука (как ссылка) -->
