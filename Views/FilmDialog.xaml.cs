@@ -101,28 +101,28 @@ namespace Kino.Views
             // Валидация названия
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                errorMessage += "! Введите название фильма\n";
+                errorMessage += "!Введите название фильма\n";
                 isValid = false;
             }
 
             // Валидация жанра
             if (string.IsNullOrWhiteSpace(txtGenre.Text))
             {
-                errorMessage += "! Введите жанр\n";
+                errorMessage += "!Введите жанр\n";
                 isValid = false;
             }
 
             // Валидация режиссёра
             if (string.IsNullOrWhiteSpace(txtDirector.Text))
             {
-                errorMessage += "! Введите режиссёра\n";
+                errorMessage += "!Введите режиссёра\n";
                 isValid = false;
             }
 
             // Валидация продолжительности
             if (!int.TryParse(txtDuration.Text, out int duration) || duration < 30 || duration > 300)
             {
-                errorMessage += "! Продолжительность должна быть целым числом от 30 до 300 минут\n";
+                errorMessage += "!Продолжительность должна быть целым числом от 30 до 300 минут\n";
                 isValid = false;
             }
 
@@ -152,7 +152,7 @@ namespace Kino.Views
                 // Есть ошибка - красная рамка и подсказка
                 textBox.BorderBrush = System.Windows.Media.Brushes.Red;
                 textBox.BorderThickness = new Thickness(2);
-                textBox.ToolTip = "! Поле заполнено неверно";
+                textBox.ToolTip = "!Поле заполнено неверно";
             }
             else
             {
