@@ -265,7 +265,7 @@ namespace Kino.Views
         {
             try  // try - блок, где может возникнуть ошибка
             {
-                // ===== СОХРАНЯЕМ ДАННЫЕ ИЗ ФОРМЫ =====
+                // Сохраняем данные из формы  
 
                 // Получаем выбранный фильм
                 var selectedFilm = cboFilm.SelectedItem as Film;
@@ -300,7 +300,7 @@ namespace Kino.Views
             }
         }
 
-        // Обработчик кнопки "ОТМЕНА"
+        // Обработчик кнопки "отмена"
 
         /// Закрывает окно без сохранения
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
