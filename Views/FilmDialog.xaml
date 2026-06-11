@@ -38,29 +38,29 @@
         <!-- 2 колонки сетки -->
         <Grid.ColumnDefinitions>
             <!-- Левая колонка: ширина 122px (для меток: "Название:", "Жанр:" и т.д.) -->
-            <ColumnDefinition Width="122"/>
+            <ColumnDefinition Width="137"/>
             <!-- Правая колонка: занимает всё оставшееся место (для полей ввода) -->
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <!-- Название фильма -->
-        <TextBlock Grid.Column="0" Text="Название фильма:" VerticalAlignment="Center" Height="16" Margin="5"/>
+        <TextBlock Grid.Column="0" Text="1. Название фильма:" VerticalAlignment="Center" Height="16" Margin="5,0,5,0"/>
         <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Жанр -->
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Жанр:" VerticalAlignment="Center" Height="16" Margin="5"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="2. Жанр:" VerticalAlignment="Center" Height="16" Margin="5,0,5,0"/>
         <TextBox x:Name="txtGenre" Grid.Row="1" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Режиссёр -->
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Режиссёр:" VerticalAlignment="Center" Height="16" Margin="5"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="3. Режиссёр:" VerticalAlignment="Center" Height="16" Margin="5,0,5,0"/>
         <TextBox x:Name="txtDirector" Grid.Row="2" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Продолжительность -->
-        <TextBlock Grid.Row="3" Grid.Column="0" Text="Продолжительность:" VerticalAlignment="Center" Height="16" Margin="5"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="4. Продолжительность:" VerticalAlignment="Center" Height="16" Margin="5,0,5,0"/>
         <TextBox x:Name="txtDuration" Grid.Row="3" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Возрастное ограничение -->
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Возр. ограничение:" VerticalAlignment="Center" Height="16" Margin="5" Grid.RowSpan="2"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="5. Возр. ограничение:" VerticalAlignment="Center" Height="16" Margin="5,0,5,0" Grid.RowSpan="2"/>
         <ComboBox x:Name="cboAgeRating" Grid.Row="4" Grid.Column="1" Margin="9,5,9,5" Grid.RowSpan="2">
             <ComboBoxItem Content="0+"/>
             <ComboBoxItem Content="6+"/>
@@ -70,12 +70,12 @@
         </ComboBox>
 
         <!-- Цена билета -->
-        <TextBlock Grid.Row="6" Grid.Column="0" Text="Цена билета:" VerticalAlignment="Center" Height="16" Margin="5"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="6. Цена билета:" VerticalAlignment="Center" Height="16" Margin="5,0,5,0"/>
         <TextBox x:Name="txtPrice" Grid.Row="6" Grid.Column="1" Margin="9,5,9,5"/>
 
         <!-- Сообщение об ошибке -->
         <TextBlock x:Name="txtError" Grid.Row="7" Grid.ColumnSpan="2" 
-           Foreground="Red" TextWrapping="Wrap" Margin="5,5,5,15"/>
+           Foreground="Red" TextWrapping="Wrap" Margin="5,5,5,10"/>
 
         <!-- Кнопки -->
         <StackPanel Grid.Row="7" 
