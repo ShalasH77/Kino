@@ -31,7 +31,7 @@
                     <!-- Панель кнопок -->
                     <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,5,0,7">
                         <Button x:Name="btnAddFilm" Content="Добавить" Width="100" Click="BtnAddFilm_Click"/>
-                        <Button x:Name="btnEditFilm" Content="Редактировать" Width="130" Click="BtnEditFilm_Click"/>
+                        <Button x:Name="btnEditFilm" Content="Редактировать" Width="135" Click="BtnEditFilm_Click"/>
                         <Button x:Name="btnDeleteFilm" Content="Удалить" Width="100" Click="BtnDeleteFilm_Click"/>
                         <Button x:Name="btnRefreshFilms" Content="Обновить" Width="100" Click="BtnRefreshFilms_Click"/>
                     </StackPanel>
