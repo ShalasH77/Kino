@@ -53,22 +53,23 @@
 
         
         <!-- Стиль всех кнопок -->
+        <!-- Внешний вид кнопки -->
         <Style TargetType="Button">
-            <!-- Внешний вид кнопки -->
-            <Setter Property="Margin" Value="7"/>
             <!-- Отступы вокруг кнопки -->
-            <Setter Property="Padding" Value="10,5"/>
-            <!-- Внутренние отступы (лево/право = 10, верх/низ = 5) -->
-            <Setter Property="Background" Value="{StaticResource SecondaryColor}"/>
+            <Setter Property="Margin" Value="3"/>
+            <!-- Внутренние отступы (лево/право = 5, верх/низ = 5) -->
+            <Setter Property="Padding" Value="5,5"/>
             <!-- Фон -->
+            <Setter Property="Background" Value="{StaticResource SecondaryColor}"/>
+            <!-- Цвет текста: -->
             <Setter Property="Foreground" Value="#604D53"/>
-            <!-- Цвет текста: белый -->
-            <Setter Property="Cursor" Value="Hand"/>
             <!-- Курсор: рука (как ссылка) -->
-            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
             <!-- Без границы -->
+            <Setter Property="BorderThickness" Value="0"/>
+            
 
-            <!-- Шаблон кнопки (определяет её внутреннюю структуру) -->
+            <!-- Кнопка (определяет её внутреннюю структуру) -->
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
